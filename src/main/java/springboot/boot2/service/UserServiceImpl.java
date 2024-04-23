@@ -2,7 +2,7 @@ package springboot.boot2.service;
 
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import springboot.boot2.daoRepo.DaoRepo;
+import springboot.boot2.daoRepo.UserDao;
 import springboot.boot2.model.User;
 
 import java.util.List;
@@ -10,9 +10,9 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final DaoRepo daoRepo;
+    private final UserDao daoRepo;
 
-    public UserServiceImpl(DaoRepo daoRepo) {
+    public UserServiceImpl(UserDao daoRepo) {
         this.daoRepo = daoRepo;
     }
 
